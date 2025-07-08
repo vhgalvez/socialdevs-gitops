@@ -6,15 +6,14 @@ Este directorio contiene los manifiestos Kubernetes necesarios para desplegar la
 
 ## 📁 Estructura
 
+```bash
 apps/
 └── frontend/
-├── deployment.yaml # Despliegue del contenedor con imagen de Docker Hub
-├── service.yaml # Servicio Kubernetes (ClusterIP)
-├── ingressroute.yaml # Traefik IngressRoute para exponer el frontend
-└── kustomization.yaml # Declaración Kustomize para ArgoCD
-
-
----
+    ├── deployment.yaml         # Despliegue del contenedor con imagen de Docker Hub
+    ├── service.yaml            # Servicio Kubernetes (ClusterIP)
+    ├── ingressroute.yaml       # Traefik IngressRoute para exponer el frontend
+    └── kustomization.yaml      # Declaración Kustomize para ArgoCD
+```
 
 ## 📦 Imagen Docker
 
