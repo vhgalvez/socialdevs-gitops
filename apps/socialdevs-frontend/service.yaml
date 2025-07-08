@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: socialdevs-service
-  namespace: socialdevs
+  name: socialdevs-frontend
 spec:
+  type: ClusterIP
   selector:
     app: socialdevs-frontend
   ports:
     - port: 80
       targetPort: 80
-  type: ClusterIP

@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: socialdevs-frontend
-  namespace: socialdevs
+  labels:
+    app: socialdevs-frontend
 spec:
   replicas: 1
   selector:
@@ -15,6 +16,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker.io/TU_USUARIO/socialdevs-frontend:latest
+          image: vhgalvez/socialdevs-public-frontend:v1.0.0
           ports:
             - containerPort: 80
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
