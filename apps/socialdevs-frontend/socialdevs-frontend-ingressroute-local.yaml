@@ -1,0 +1,17 @@
+# socialdevs-frontend-ingressroute-local.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: socialdevs-frontend
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`frontend.socialdevs.site`)
+      kind: Rule
+      services:
+        - name: socialdevs-frontend
+          port: 80
+  tls:
+    secretName: wildcard-socialdevs-tls
