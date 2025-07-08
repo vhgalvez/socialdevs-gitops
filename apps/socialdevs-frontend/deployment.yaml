@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: socialdevs-frontend
+  namespace: socialdevs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: socialdevs-frontend
+  template:
+    metadata:
+      labels:
+        app: socialdevs-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: docker.io/TU_USUARIO/socialdevs-frontend:latest
+          ports:
+            - containerPort: 80
