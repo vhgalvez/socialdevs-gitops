@@ -1,8 +1,8 @@
-# apps\socialdevs-frontend\kustomization.yaml
+# apps/socialdevs-frontend/kustomization.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
-  # - ingressroute-local.yaml   # descomenta si también aplicas el entorno local
+  - socialdevs-frontend-ingressroute-public.yaml
+  # - socialdevs-frontend-ingressroute-local.yaml  # ← solo si lo usas en local
