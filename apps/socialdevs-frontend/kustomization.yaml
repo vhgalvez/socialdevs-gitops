@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - ingressroute-public.yaml
+  - ingress.yaml
   # - ingressroute-local.yaml   # descomenta si también aplicas el entorno local
