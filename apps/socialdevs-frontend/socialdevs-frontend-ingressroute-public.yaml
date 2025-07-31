@@ -8,9 +8,9 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`socialdevs.site`)
+    - match: Host(`socialdevs.site`) || Host(`www.socialdevs.site`)
       kind: Rule
       services:
         - name: socialdevs-frontend
           port: 80
-  tls: {}  # TLS automático con Let's Encrypt (si está habilitado en Traefik)
+  tls: {}
