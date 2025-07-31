@@ -1,6 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
+  - socialdevs-frontend-ingressroute-local.yaml
+  - socialdevs-frontend-ingressroute-public.yaml

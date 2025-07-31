@@ -1,7 +1,8 @@
+# apps/socialdevs-frontend/socialdevs-frontend-ingressroute-public.yaml
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: socialdevs-frontend
+  name: socialdevs-frontend-public
   namespace: default
 spec:
   entryPoints:
@@ -12,4 +13,4 @@ spec:
       services:
         - name: socialdevs-frontend
           port: 80
-  tls: {}  # 👈 permite a Traefik usar Let's Encrypt automáticamente
+  tls: {}  # ← Habilita TLS automático con Let's Encrypt (si está configurado en Traefik)
