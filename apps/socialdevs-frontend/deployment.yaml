@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vhgalvez/socialdevs-public-frontend:6
+          image: vhgalvez/socialdevs-public-frontend:7
           ports:
             - containerPort: 80
           resources:
