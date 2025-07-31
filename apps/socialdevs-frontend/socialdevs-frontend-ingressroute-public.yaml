@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`public.socialdevs.site`)
+    - match: Host(`socialdevs.site`)
       kind: Rule
       services:
         - name: socialdevs-frontend
