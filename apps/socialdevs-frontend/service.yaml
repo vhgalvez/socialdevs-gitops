@@ -1,9 +1,9 @@
+# apps\socialdevs-frontend\service.yaml
 apiVersion: v1
 kind: Service
 metadata:
   name: socialdevs-frontend
 spec:
-  type: ClusterIP
   selector:
     app: socialdevs-frontend
   ports:

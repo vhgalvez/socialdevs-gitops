@@ -1,19 +1,21 @@
+# argo-app-socialdevs-frontend.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: socialdevs-frontend
   namespace: argocd
 spec:
-  destination:
-    name: ''
-    namespace: frontend
-    server: 'https://kubernetes.default.svc'
-  source:
-    repoURL: 'https://github.com/vhgalvez/socialdevs-gitops'
-    targetRevision: main
-    path: apps/frontend
   project: default
+  source:
+    repoURL: https://github.com/vhgalvez/socialdevs-gitops
+    targetRevision: HEAD          # o “main”
+    path: apps/socialdevs-frontend
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
